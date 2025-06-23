@@ -14,8 +14,17 @@ If the implementation is hard to explain, it's a bad idea.
 Although never is often better than *right* now.
 """
 
-zen = open("zen.txt", "r+")
+# zen = open("zen.txt", "r+")
+#
+# zenInverse = "\n".join([line for line in reversed(zen.read().split("\n"))])
+# print(zenInverse)
+# zen.close()
 
-zenInverse = "\n".join([line for line in reversed(zen.read().split("\n"))])
-print(zenInverse)
+# Вариант 2
+
+zen = open("zen.txt", "r+")
+lines = zen.readlines()
 zen.close()
+
+for line in reversed(lines):
+    print(line.strip())

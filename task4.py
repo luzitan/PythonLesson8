@@ -30,12 +30,12 @@ text.close()
 
 dict_letters = {}
 
-for i in range(len(str_text)):
-    if str_text[i].isalpha():
-        if str_text[i] not in dict_letters:
-            dict_letters[str_text[i]] = 1
+for char in str_text:
+    if char.isalpha():
+        if char not in dict_letters:
+            dict_letters[char] = 1
         else:
-            dict_letters[str_text[i]] += 1
+            dict_letters[char] += 1
 
 count = sum(dict_letters.values())
 for key, value in dict_letters.items():
